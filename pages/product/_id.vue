@@ -567,7 +567,6 @@ export default Vue.extend({
     let url = window.location.pathname.split("/").pop();
     let url2 = "https://cantra.a-lux.dev/api/recommendation/" + url;
     this.$axios.get(url2).then((res) => {
-      alert("asdas");
       this.recommendations = res.data;
       this.recommendations.forEach((element, index) => {
         this.checkedRecommendations.push({
@@ -1090,6 +1089,7 @@ img.accordion__body-content-img {
     max-width: 579px;
     height: 386px;
     width: 100%;
+    object-fit: contain;
   }
   &-bigcontent {
     // width: 90%;

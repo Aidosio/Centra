@@ -34,7 +34,7 @@
             :slides-per-view="1"
             :space-between="50"
             :options="swiperOptions">
-  
+
             <swiper-slide v-for="(item,index) in gallery" :key="index" class="swiper-slide sliding-swiper">
                <img :src="item" alt=""  class="swiper-img"/>
 
@@ -45,7 +45,7 @@
     </div>
     <div class="second_block">
       <div class="cantra__content">
-        <Input />
+        <Input/>
       </div>
     </div>
     <div class="third_block">
@@ -70,9 +70,10 @@
 
         <div class="my_pagination">
           <div v-for="(page,index) in pages" :key="page.index">
-            <span @click="pagination(page), activePage = index" :class="{'active_pag' : index === activePage}" class="choosed_pag">{{
-              page
-            }}</span>
+            <span @click="pagination(page), activePage = index" :class="{'active_pag' : index === activePage}"
+                  class="choosed_pag">{{
+                page
+              }}</span>
           </div>
           &nbsp;.&nbsp;&nbsp;.&nbsp;&nbsp;.
         </div>
@@ -89,12 +90,12 @@
             />
             <div class="pb_price">
               <div class="two_products">
-                <span>Два полных комплекта<br /></span>
+                <span>Два полных комплекта<br/></span>
                 <div>со скидкой 15%</div>
               </div>
               <strike class="sale_price">17960</strike>
               <strong
-                ><span class="PB_bundle_total_price">15266 руб. </span></strong
+              ><span class="PB_bundle_total_price">15266 руб. </span></strong
               >
               <div class="two_products_order_btn">Заказать</div>
             </div>
@@ -110,7 +111,7 @@
     </div>
     <div class="fifth_block fifth_block_home_page">
       <div class="cantra_content">
-        <accordion class="onDesktop" />
+        <accordion class="onDesktop"/>
         <div class="accordion onMobile">
           <img
             src="@/assets/img/bigchaiirs.png"
@@ -118,7 +119,7 @@
           />
           <div class="accordion__content">
             <div class="accordion__header" @click="accordionOpen = 1">
-              <img class="accordion__header-plus" />
+              <img class="accordion__header-plus"/>
               <h3 class="accordion__header-title">Защита от износа</h3>
             </div>
             <div class="accordion__body" :class="{ open: accordionOpen === 1 }">
@@ -129,7 +130,7 @@
               </p>
             </div>
             <div class="accordion__header" @click="accordionOpen = 2">
-              <img class="accordion__header-plus" />
+              <img class="accordion__header-plus"/>
               <h3 class="accordion__header-title">Защита от окрашивания</h3>
             </div>
             <div class="accordion__body" :class="{ open: accordionOpen === 2 }">
@@ -139,7 +140,7 @@
               </p>
             </div>
             <div class="accordion__header" @click="accordionOpen = 3">
-              <img class="accordion__header-plus" />
+              <img class="accordion__header-plus"/>
               <h3 class="accordion__header-title">Лёгкая установка</h3>
             </div>
             <div class="accordion__body" :class="{ open: accordionOpen === 3 }">
@@ -153,7 +154,7 @@
               </p>
             </div>
             <div class="accordion__header" @click="accordionOpen = 4">
-              <img class="accordion__header-plus" />
+              <img class="accordion__header-plus"/>
               <h3 class="accordion__header-title">Ручная работа</h3>
             </div>
             <div class="accordion__body" :class="{ open: accordionOpen === 4 }">
@@ -264,7 +265,7 @@
                 <div class="personal__logo-checkbox">
                   <input
                     type="radio"
-                    value="0"
+                    value="1"
                     v-model="customActive"
                     id="withoutLogo"
                   />
@@ -274,13 +275,13 @@
                   <div class="personal__logo-checkbox">
                     <input
                       type="radio"
-                      value="1"
+                      value="0"
                       v-model="customActive"
                       id="withLogo"
                     />
                     <label for="withLogo">С логотипом</label>
                   </div>
-                  <input v-if="customActive" type="file" class="file" />
+                  <input v-if="customActive" type="file" class="file"/>
                 </div>
               </div>
               <div class="personal__inputs">
@@ -303,8 +304,8 @@
                 />
               </div>
               <p class="personal__ps">
-                *Индивидуальный заказ выполняется по 50% предоплате.<br />
-                Сроки изготовления - 1.5-2 недели.<br />
+                *Индивидуальный заказ выполняется по 50% предоплате.<br/>
+                Сроки изготовления - 1.5-2 недели.<br/>
                 Точную сумму и детали оплаты Вам сообщит оператор.
               </p>
               <div class="personal__submit">
@@ -321,12 +322,14 @@
                     checked=""
                   />
                   <label class="tick_label_customorder" for="policy_customorder"
-                    ><div class="tick_customorder"></div
-                  ></label>
+                  >
+                    <div class="tick_customorder"></div
+                    >
+                  </label>
                   <span class="policy_text_customorder"
-                    >Я согласен(-а) с
+                  >Я согласен(-а) с
                     <a href="/policy" target="_blank"
-                      >политикой обработки персональных данных</a
+                    >политикой обработки персональных данных</a
                     ></span
                   >
                 </div>
@@ -337,10 +340,10 @@
               <!-- <h2 class="personal__price" v-else>Выберите тип накидок</h2>  -->
             </div>
             <div class="personal__items-right onDesktop" v-if="personal">
-              <img class="layer1" :src="personal.type[priceActive].image" />
-              <img class="layer2" :src="personal.suede[suedeActive].image" />
-              <img class="layer3" :src="personal.string[stringActive].image" />
-              <img class="layer4" :src="personal.edging[edgingActive].image" />
+              <img class="layer1" :src="personal.type[priceActive].image"/>
+              <img class="layer2" :src="personal.suede[suedeActive].image"/>
+              <img class="layer3" :src="personal.string[stringActive].image"/>
+              <img class="layer4" :src="personal.edging[edgingActive].image"/>
             </div>
           </div>
         </form>
@@ -361,7 +364,7 @@
               :key="index"
               class="swiper-slide sliding-swiper"
             >
-              <img :src="item" alt="" class="swiper-img" />
+              <img :src="item" alt="" class="swiper-img"/>
             </swiper-slide>
           </swiper>
 
@@ -377,11 +380,11 @@
 
             <h3>
               Мы любим и уважаем наших клиентов. Каждый ваш отзыв очень важен
-              для нас!<br />
+              для нас!<br/>
               Вы помогаете нам понять, что мы не зря делаем свое дело!
             </h3>
           </div>
-          <Reviews />
+          <Reviews/>
         </div>
       </div>
     </div>
@@ -396,7 +399,7 @@
         </div>
         <aside id="column-right" class="col-sm-3 hidden-xs">
           <div class="wide-form ask_again" v-if="!success">
-            <Input />
+            <Input/>
             <div class="clear"></div>
           </div>
         </aside>
@@ -412,8 +415,9 @@ import ProductCard from "~/components/product-card.vue";
 import axios from "axios";
 import Reviews from "~/components/layout/reviews.vue";
 import accordion from "~/components/accordionhorizontal.vue";
-import { TheMask } from "vue-the-mask";
+import {TheMask} from "vue-the-mask";
 import Swiper from "swiper";
+
 export default Vue.extend({
   components: {
     Input,
@@ -515,7 +519,7 @@ export default Vue.extend({
   },
   methods: {
     pagination(page) {
-      
+
       this.currentPage = page;
       axios
         .post(`https://cantra.a-lux.dev/api/items?page=${this.currentPage}`, {
@@ -556,41 +560,51 @@ export default Vue.extend({
 });
 </script>
 <style lang="scss">
-.active_pag{
+.active_pag {
   color: red !important;
 }
+
 .my_pagination {
   display: flex;
   justify-content: center;
 }
+
 span.choosed_pag {
   cursor: pointer;
 }
+
 .common-home {
   overflow: hidden;
 }
+
 .cantra_content {
   max-width: 1200px;
 }
+
 .swiper-slide {
   text-align: center;
 }
+
 .form-control {
   font-size: 12px !important;
 }
+
 .accordion {
   &__content {
     width: 90%;
     margin: auto;
   }
+
   &__header {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
   }
+
   &__body {
     max-height: 0px;
     transition: 0.5s ease-in all;
     overflow: hidden;
+
     &-content {
       font-size: 15px;
       // width: 80%;
@@ -598,6 +612,7 @@ span.choosed_pag {
     }
   }
 }
+
 .open {
   // display: flex;
   max-height: 500px;
@@ -621,13 +636,17 @@ span.choosed_pag {
   display: block;
   padding-left: 15px;
 }
+
 .personal {
   width: 100%;
+
   &__items {
     display: flex;
     justify-content: space-between;
+
     &-right {
       position: relative;
+
       img {
         position: absolute;
         width: 500px;
@@ -636,10 +655,12 @@ span.choosed_pag {
       }
     }
   }
+
   &__submit {
     display: flex;
     max-width: 450px;
     justify-content: space-between;
+
     &-button {
       width: 226px;
       height: 39px;
@@ -651,6 +672,7 @@ span.choosed_pag {
       color: white;
       text-shadow: none;
     }
+
     &-checkbox {
       display: flex;
       margin: auto;
@@ -669,11 +691,13 @@ span.choosed_pag {
     text-align: justify;
     margin-bottom: 5px;
   }
+
   &__inputs {
     max-width: 450px;
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
+
     &-small {
       width: 196px;
       // width: 100%;
@@ -690,6 +714,7 @@ span.choosed_pag {
       margin-bottom: 20px;
       padding-left: 15px;
     }
+
     &-big {
       width: 447px;
       // width: 100%;
@@ -707,25 +732,30 @@ span.choosed_pag {
       margin-bottom: 15px;
     }
   }
+
   &__size,
   &__logo {
     display: flex;
     flex-flow: wrap;
     margin-bottom: 20px;
+
     &-withFile {
       height: 100%;
       display: flex;
       flex-flow: column;
+
       input {
         margin-top: 20px;
       }
     }
+
     &-checkbox {
       margin-right: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 100%;
+
       input {
         width: 26px;
         height: 26px;
@@ -735,6 +765,7 @@ span.choosed_pag {
         margin: auto !important;
         margin-right: 5px !important;
       }
+
       label {
         margin: auto;
         font-size: 16px;
@@ -748,6 +779,7 @@ span.choosed_pag {
       }
     }
   }
+
   &__colors {
     display: flex;
     max-width: 450px;
@@ -760,12 +792,15 @@ span.choosed_pag {
   display: flex !important;
   flex-flow: wrap !important;
 }
+
 ::v-deep .agile__list {
   border-radius: 8px;
 }
+
 .first__block {
   margin-top: 20px;
 }
+
 .cantra__content {
   display: flex;
   width: 100%;
@@ -784,6 +819,7 @@ span.choosed_pag {
   align-items: center;
   vertical-align: top;
 }
+
 .universal__square-title {
   line-height: 27px;
   max-width: 300px;
@@ -793,6 +829,7 @@ span.choosed_pag {
   color: #000000;
   /* margin-top: 105px; */
 }
+
 .universal__square-content {
   line-height: 20px;
   max-width: 300px;
@@ -801,20 +838,25 @@ span.choosed_pag {
   color: #000000;
   margin-top: 10px;
 }
+
 .first__swiper {
   max-width: 750px;
   // width: 100%;
 }
+
 .slider__wrapper {
   position: relative;
   margin-bottom: 24px;
   display: flex;
 }
+
 .sliding {
   width: 100%;
 }
+
 .slider__image {
 }
+
 .hooper ul {
   display: flex !important;
   overflow: hidden;
@@ -827,6 +869,7 @@ span.choosed_pag {
   background: url("@/assets/img/bigchaiirs.png");
   height: 100%;
 }
+
 .slide_card {
   width: 100%;
 }
@@ -836,23 +879,28 @@ span.choosed_pag {
   margin: auto;
   max-height: 600px;
 }
+
 .galleria-image {
   max-width: 1000px;
   margin: auto;
 }
+
 .galleria-images img {
   height: 100%;
   width: 100%;
 }
+
 .sliding-swiper {
   margin: auto;
 }
+
 .swiper-img {
   /* max-height: 698px; */
   height: 100%;
   max-width: 539px;
   width: 100%;
 }
+
 .form-control {
   background-color: transparent;
   max-width: 264px;
@@ -867,11 +915,13 @@ span.choosed_pag {
   border-left-width: 0;
   border-radius: 0;
 }
+
 .swiper-pagination-bullet-active {
   color: #fff;
   opacity: 0.75 !important;
   background: black !important;
 }
+
 .swiper-pagination-bullet {
   text-align: center;
   line-height: 40px;
@@ -884,27 +934,33 @@ span.choosed_pag {
   width: 20px !important;
   height: 20px !important;
 }
+
 .onDesktop {
   display: flex;
 }
+
 .onMobile {
   display: none !important;
 }
+
 .gallery-pagination {
   position: unset !important;
   margin-bottom: 3%;
   margin: auto;
   width: 100%;
 }
+
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
   display: none !important;
 }
+
 .swiper-pagination-bullet-active-main,
 .swiper-pagination-bullet-active-prev,
 .swiper-pagination-bullet-active-next {
   display: none !important;
   transform: scale(1) !important;
 }
+
 @media (max-width: 1100px) {
   .swiper-container {
     height: 100%;
@@ -912,12 +968,15 @@ span.choosed_pag {
     display: flex;
   }
 }
+
 .top-line__items {
   max-width: 96vw !important;
 }
+
 .swiper-container {
   height: 100%;
 }
+
 .swiper-wrapper {
   height: 100%;
 }
@@ -932,6 +991,7 @@ span.choosed_pag {
   }
   .adaptive__img {
     max-height: 200px;
+
     img {
       height: 100%;
     }
@@ -942,11 +1002,14 @@ span.choosed_pag {
 
   .personal__items {
     flex-flow: column;
+
     &-left {
       margin: auto;
     }
+
     &-right {
       height: 400px;
+
       img {
         right: 50%;
         transform: translateX(50%);
@@ -991,9 +1054,11 @@ span.choosed_pag {
     width: 49%;
     margin: 0;
     text-align: center;
+
     input {
       margin: 0 !important;
     }
+
     label {
       max-width: unset;
       height: 100%;
@@ -1013,6 +1078,7 @@ span.choosed_pag {
   }
   .personal__submit {
     flex-flow: column;
+
     input {
       margin: auto;
     }
@@ -1037,6 +1103,7 @@ span.choosed_pag {
   //   margin-bottom: 20px;
   // }
 }
+
 @media (max-width: 700px) {
   .swiper-slide.swiper-slide-active {
     height: 100%;
@@ -1059,6 +1126,7 @@ span.choosed_pag {
       height: 100%;
       width: 65%;
     }
+
     max-height: 100px;
   }
   .universal__square {
@@ -1071,6 +1139,7 @@ span.choosed_pag {
   }
   .personal__items-right {
     height: 350px;
+
     img {
       max-width: 300px;
       max-height: 300px;
